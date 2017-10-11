@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Template HTML</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <canvas width="600" height="600">O canvas é uma grade tridimensional. A coordenada (0,0) fica no canto superior esquerdo.</canvas>
+        <script>
+            var tela = document.querySelector('canvas');
+            var pincel = tela.getContext('2d');
+
+            pincel.fillStyle = 'lightgray';
+            pincel.fillRect(0, 0, 600, 600);
+            pincel.fillStyle = 'green';
+            pincel.beginPath();
+            pincel.arc(300, 300, 50, 0, 2 * Math.PI);
+            pincel.fill();
+
+            pincel.beginPath();
+            pincel.fillStyle = 'blue';
+            pincel.beginPath();
+            pincel.moveTo(300, 150);
+            pincel.lineTo(250, 250);
+            pincel.lineTo(350, 250);
+            pincel.fill();
+            
+
+        </script>
+    </body>
+</html>
