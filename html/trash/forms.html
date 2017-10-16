@@ -8,14 +8,36 @@
     </head>
     <body>
 		<header>
-	        <h1>Sopa de Tags</h1>
+	        <h1>Formulários</h1>
 		</header>
 		<main>
 			<form action="http://terra.com.br">
 				Nome: <input type="text" id="_Nome"><br>
 				Sobrenome: <input type="text" id="_Sobrenome"><br>
 				Senha: <input type="password" id="_Senha"><br>
-				<input type="submit" value="Enviar" />
+				Data: <input type="date"><br>
+				Número: <input type="number" min="10" max="20"/><br>
+				URL: <input type="url"><br />
+				Email: <input type="email"><br />
+				Rage: <input type="range" step="10"><br />
+				Color: <input type="color"><br />
+				<textarea></textarea><br />
+				<input type="text" pattern="\d{5}-\d{3}" /><br />
+
+				<select multiple>
+					<option value="1">GM/Chevrolet</option>
+					<option value="2">Ford</option>
+					<option value="3">VolksWagem</option>
+					<option value="4" selected="selected">Fiat</option>
+				</select><br>
+				<input type="search" list="_cidades" autocomplete="on" name="_buscarCidade" placeholder="Pesquisar">
+					<datalist id="_cidades">
+						<option>Antônio Prado</option>
+						<option>Caxias do Sul</option>
+						<option>Porto Alegre</option>
+						<option>Florianópolis</option>
+					</datalist>
+				<input type="submit" id="_EnviarDados" value="Enviar" />
 			</form>
 		</main>
 		
