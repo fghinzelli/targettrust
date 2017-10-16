@@ -13,13 +13,27 @@
         </header>
         <form action="#">
             <label>Nome:</label><input type="text" name="nome" id="theName" />
+            <br />
             <label>Email:</label><input type="email" name="email" id="theEmail"/>
+            <br />
             <fieldset>
                 <legend>Animal Preferido</legend>
-                <label><input type="radio" name="theAnimal" id="AnimalCat"></label>
+                <label><input type="radio" name="theAnimal" id="AnimalCat" value="Gato">Gato</label>
+                <label><input type="radio" name="theAnimal" id="AnimalDog" value="Cachorro">Cachorro</label>
+                <label><input type="radio" name="theAnimal" id="AnimalFish" value="Peixe">Peixe</label>
             </fieldset>
-            
-
+            <br />
+            <label>Assunto:</label>
+            <select id="theSubject">
+                <option value="GL">Gato Louco</option>
+                <option value="CC">Cachorro Cagão</option>
+                <option value="PB">Peixe Bipolar</option>
+            </select>
+            <br /> 
+            <label>Comentários:</label>
+            <textarea id="theComments"></textarea>
+            <p id="deliveryResult">Aqui você encontra um formulário de contato com a LupiPetShop. Basta selecionar um assunto, escrever sua mensagem e enviar. Ela será encaminhada por e-mail diretamente a um departamento irresponsável qualquer.</p>
+            <input id="submitContact" type="submit" value="Enviar Dados" />
         </form>
     </body>
 </html>

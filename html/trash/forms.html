@@ -11,9 +11,9 @@
 	        <h1>Formulários</h1>
 		</header>
 		<main>
-			<form action="http://terra.com.br">
+			<form method="GET" action="http://terra.com.br">
 				Nome: <input type="text" id="_Nome"><br>
-				Sobrenome: <input type="text" id="_Sobrenome"><br>
+				Sobrenome: <input type="text" id="_Sobrenome" autofocus><br>
 				Senha: <input type="password" id="_Senha"><br>
 				Data: <input type="date"><br>
 				Número: <input type="number" min="10" max="20"/><br>
@@ -22,7 +22,7 @@
 				Rage: <input type="range" step="10"><br />
 				Color: <input type="color"><br />
 				<textarea></textarea><br />
-				<input type="text" pattern="\d{5}-\d{3}" /><br />
+				<input type="text" pattern="\d{5}-\d{3}" required /><br />
 
 				<select multiple>
 					<option value="1">GM/Chevrolet</option>
@@ -37,7 +37,7 @@
 						<option>Porto Alegre</option>
 						<option>Florianópolis</option>
 					</datalist>
-				<input type="submit" id="_EnviarDados" value="Enviar" />
+				<input type="submit" id="_EnviarDados" value="Enviar" formnovalidate/>
 			</form>
 		</main>
 		
