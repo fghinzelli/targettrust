@@ -7,3 +7,15 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 0.8em;
 }
+
+header {
+    background-color: #161146;
+}
+
+nav {
+    background-color: #9894BB;
+}
+
+footer {
+    background-color: #45407D;
+}
