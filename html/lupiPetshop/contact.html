@@ -8,32 +8,43 @@
     </head>
     <body>
         <header>
+            <h1><a href="index.html"><img src="images/lupiLogo.png" alt="Logotipo do Lupi" width="250" height="74" /></a></h1>
+            <nav>
+                <ul>
+                    <li><span> | </span><a href="index.html">Início</a></li>		
+                    <li><span> | </span><a href="products.html">Produtos</a></li>		
+                    <li><span> | </span><a href="services.html">Serviços</a></li>		
+                    <li><span> | </span><a href="contact.html">Contato</a></li>		
+                </ul>
+            </nav>
             <h1>Entre em contato</h1>
             <p>A sua opinião é de grande interesse para nós, entre em contato por meio deste canal, estamos muito interessados no que você tem a escrever. Criamos este espaço especialmente para você fazer seus comentários, dar sugestões e esclarecer dúvidas. Escreva pra gente! É fácil, rápido, alucinante, altas aventuras e muita confusão. Teremos o maior prazer em ignorar.</p>
         </header>
-        <form action="#">
-            <label>Nome:</label><input type="text" name="nome" id="theName" />
-            <br />
-            <label>Email:</label><input type="email" name="email" id="theEmail"/>
-            <br />
-            <fieldset>
-                <legend>Animal Preferido</legend>
-                <label><input type="radio" name="theAnimal" id="AnimalCat" value="Gato">Gato</label>
-                <label><input type="radio" name="theAnimal" id="AnimalDog" value="Cachorro">Cachorro</label>
-                <label><input type="radio" name="theAnimal" id="AnimalFish" value="Peixe">Peixe</label>
-            </fieldset>
-            <br />
-            <label>Assunto:</label>
-            <select id="theSubject">
-                <option value="GL">Gato Louco</option>
-                <option value="CC">Cachorro Cagão</option>
-                <option value="PB">Peixe Bipolar</option>
-            </select>
-            <br /> 
-            <label>Comentários:</label>
-            <textarea id="theComments"></textarea>
-            <p id="deliveryResult">Aqui você encontra um formulário de contato com a LupiPetShop. Basta selecionar um assunto, escrever sua mensagem e enviar. Ela será encaminhada por e-mail diretamente a um departamento irresponsável qualquer.</p>
-            <input id="submitContact" type="submit" value="Enviar Dados" />
-        </form>
+        <main>
+            <form action="#">
+                <label>Nome:</label><input type="text" name="nome" id="theName" />
+                <br />
+                <label>Email:</label><input type="email" name="email" id="theEmail"/>
+                <br />
+                <fieldset>
+                    <legend>Animal Preferido</legend>
+                    <label><input type="radio" name="theAnimal" id="AnimalCat" value="Gato">Gato</label>
+                    <label><input type="radio" name="theAnimal" id="AnimalDog" value="Cachorro">Cachorro</label>
+                    <label><input type="radio" name="theAnimal" id="AnimalFish" value="Peixe">Peixe</label>
+                </fieldset>
+                <br />
+                <label>Assunto:</label>
+                <select id="theSubject">
+                    <option value="GL">Gato Louco</option>
+                    <option value="CC">Cachorro Cagão</option>
+                    <option value="PB">Peixe Bipolar</option>
+                </select>
+                <br /> 
+                <label>Comentários:</label>
+                <textarea id="theComments"></textarea>
+                <p id="deliveryResult">Aqui você encontra um formulário de contato com a LupiPetShop. Basta selecionar um assunto, escrever sua mensagem e enviar. Ela será encaminhada por e-mail diretamente a um departamento irresponsável qualquer.</p>
+                <input id="submitContact" type="submit" value="Enviar Dados" />
+            </form>
+        </main>
     </body>
 </html>
