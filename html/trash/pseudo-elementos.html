@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Template HTML</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <script src="script.js"></script>
+        <style>
+            
+            .livros li::before {
+                content: "Livro ";
+                color: rgb(41, 81, 211);
+                font-weight: bold;
+            }
+            
+            li[rel='timao']:after {
+                content: " - jogador Corinthians";
+            }
+
+            li[rel='tricolor']:after {
+                content: " - jogador Flu";
+            }
+
+            div {
+                width: 100px;
+                height: 100px;
+                background-color: #fff;
+                border: 1px #000 solid;
+                text-align: center;
+                float: left;
+            }
+
+            
+            section :nth-child(4), section :nth-child(7) {
+                clear: both;
+            }
+            
+
+            section {
+                width: 350px;
+                margin: 0px auto;
+                margin-top: 10%;
+            }
+
+            section :nth-child(2) {
+                margin-right: 0px auto;
+            }
+
+            div:first-child {
+                background-color: #900;
+                margin-left: 0px;
+            }
+
+            div:last-child {
+                background-color: #006;
+                margin-right: 0px;
+            }
+
+            
+        </style>
+    </head>
+    <body>
+        <header></header>
+		<main>
+            <!--
+			<ul class="livros">
+                <li>O mundo de Sofia</li>
+                <li>Minha luta</li>
+                <li>Bíblia Sagrada</li>
+            </ul>
+            <ul>
+                <li rel="timao">Emerson</li>
+                <li rel="tricolor">Jadson</li>
+            </ul>
+            -->
+            <section>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+            </section>
+		</main>
+		<footer></footer>
+    </body>
+</html>

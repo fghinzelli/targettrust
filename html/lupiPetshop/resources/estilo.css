@@ -10,12 +10,32 @@ body {
 
 header {
     background-color: #161146;
+    
 }
 
-nav {
+header nav, header h1{
+    margin: 0px auto;
+    width: 768px;
+}
+
+header nav{
     background-color: #9894BB;
+}
+
+section {
+    width: 768px;
+    margin: 0px auto;
+}
+
+article {
+    float: left;
+    width: 50%;
 }
 
 footer {
     background-color: #45407D;
+}
+
+main {
+    overflow: auto;
 }
