@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Template HTML</title>
+        <style>
+            section {
+                width: 900px;
+                margin: 0px auto;
+                border: 1px solid black;
+            }
+
+            div {
+                width: 286px;
+                /*width: 300px; */
+                height: 200px;
+                float: left;
+                text-align: center;
+                border: 3px solid black;
+                padding: 4px;
+                /* box-sizing: border-box; */
+            }
+
+            .clearfix {
+                clear: both;
+            }
+        
+        </style>
+        
+    </head>
+    <body>
+        <header></header>
+		<main>
+			<section>
+                <div>Cavalo</div>
+                <div>Galinha</div>
+                <div>Pato</div>
+                <div>Leão</div>
+                <div>Elefante</div>
+                <div>Girafa</div>
+                <div>Cachorro</div>
+                <div>Gato</div>
+                <div>Zebra</div>
+                <br class="clearfix">
+            </section>
+		</main>
+        <footer></footer>
+        <script>
+            var divs = document.getElementsByTagName('div');
+            var background = ["#f36", "#C3C", "#fc0", "#FC6", "#9C0", "#ABC", "#AFA", "#9C0", "3E3"];
+            for (i=0; i<divs.length; i++) {
+                cor = Math.floor(Math.random() * (background.length - 1));
+                divs[i].style.backgroundColor = background[cor];
+            }
+        </script>
+    </body>
+</html>

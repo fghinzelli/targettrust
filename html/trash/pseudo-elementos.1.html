@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Template HTML</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css" />
+        <script src="script.js"></script>
+        <style>
+            
+            div {
+                width: 100px;
+                height: 100px;
+            }
+
+            section {
+                background-color: lightgray;
+            }
+
+            section :nth-child(3n){
+                background-color: green;
+            }
+
+            div {
+               float: left; 
+            }
+
+            .clearfix {
+                clear: both;
+            }
+            
+            
+        </style>
+    </head>
+    <body>
+        <header></header>
+		<main>
+            <section>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+                <div>7</div>
+                <div>8</div>
+                <div>9</div>
+                <br class="clearfix">
+            </section>
+		</main>
+		<footer></footer>
+    </body>
+</html>
