@@ -4,13 +4,44 @@
         <meta charset="utf-8" />
         <title>Template HTML</title>
         <style>
-            
+            main {
+                width: 900px;
+                margin: 0px auto;
+                background-color: green;
+            }
+
+            #esquerda {
+                width: 430px;
+                background-color: blue;
+                float: left;
+            }
+
+            #direita {
+                width: 430px;
+                background-color: red;
+                margin-left: 40px; 
+                float: left;
+            }
+
+            .clearfix {
+                clear: both;
+            }
         </style>
     </head>
     <body>
         <header></header>
 		<main>
-			
+			<div id="esquerda">
+                <h2>Textos 1</h2>
+                <p>Vehicula orci nibh, eu sagittis ligula cursus a. Nam eget libero augue. Aenean laoreet neque ex, ac efficitur quam pretium sed. Nam varius massa nec diam rutrum, maximus consectetur purus lacinia. Cras in mattis quam. Nunc dictum dui sed lectus blandit varius. Nunc venenatis sapien eget feugiat varius. In ut urna congue tellus commodo aliquam. Pellentesque porta metus nec metus auctor, sed placerat sem ultricies.</p>
+                <p>Nam ut lectus nec elit posuere fermentum id scelerisque lectus. Fusce vulputate, mi at sollicitudin laoreet, velit nulla tristique massa, nec euismod ante sem quis dui. Nullam at maximus nisl. Phasellus enim erat, vulputate non mauris ac, consectetur sodales orci. Pellentesque id laoreet lectus. Proin urna urna, commodo in aliquam eu, ultrices in risus. Praesent fringilla erat arcu, et mattis nisl lobortis vel. Nunc eleifend efficitur est, a venenatis risus semper non. Morbi feugiat pharetra ligula, non fringilla nulla pellentesque in. Cras sit amet eros ac mi imperdiet ultricies. Nam at augue mi. Nulla sapien purus, laoreet quis dui et, finibus sodales mauris.</p>        
+            </div>
+            <div id="direita">
+                <h2>Textos 2</h2>
+                <p>Vehicula orci nibh, eu sagittis ligula cursus a. Nam eget libero augue. Aenean laoreet neque ex, ac efficitur quam pretium sed. Nam varius massa nec diam rutrum, maximus consectetur purus lacinia. Cras in mattis quam. Nunc dictum dui sed lectus blandit varius. Nunc venenatis sapien eget feugiat varius. In ut urna congue tellus commodo aliquam. Pellentesque porta metus nec metus auctor, sed placerat sem ultricies.</p>
+                <p>Nam ut lectus nec elit posuere fermentum id scelerisque lectus. Fusce vulputate, mi at sollicitudin laoreet, velit nulla tristique massa, nec euismod ante sem quis dui. Nullam at maximus nisl. Phasellus enim erat, vulputate non mauris ac, consectetur sodales orci. Pellentesque id laoreet lectus. Proin urna urna, commodo in aliquam eu, ultrices in risus. Praesent fringilla erat arcu, et mattis nisl lobortis vel. Nunc eleifend efficitur est, a venenatis risus semper non. Morbi feugiat pharetra ligula, non fringilla nulla pellentesque in. Cras sit amet eros ac mi imperdiet ultricies. Nam at augue mi. Nulla sapien purus, laoreet quis dui et, finibus sodales mauris.</p>        
+            </div>
+            <br class="clearfix" />
 		</main>
 		<footer></footer>
     </body>
