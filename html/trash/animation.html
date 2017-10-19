@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Template HTML</title>
+        <style>
+            div {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                transition: All 1s ease;
+                animation: animacaoTeste;
+                animation-duration: 5s;
+                animation-timing-function: ease;
+                animation-iteration-count: infinite;
+            }
+
+            div:hover {
+                transform: translate(0px, 0px);
+            }
+
+            
+
+            @keyframes animacaoTeste{
+                0% {
+                    background: black;
+                }
+                25% {
+                    background: green;
+                }
+                50% {
+                    transform: scale(2) skew(45deg) translate(300px);
+                }
+                75% {
+                    background-color: blue;
+                }
+                100% {
+                    background-color: red;
+                }
+
+            }
+        </style>
+    </head>
+    <body>
+        <header></header>
+		<main>
+			<div></div>
+		</main>
+		<footer></footer>
+    </body>
+</html>

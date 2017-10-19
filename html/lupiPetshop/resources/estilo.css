@@ -17,13 +17,51 @@ header {
     
 }
 
-header nav ul, header h1{
+nav ul, header h1{
     margin: 0px auto;
     width: 768px;
 }
 
-header nav{
+
+nav{
     background-color: #9894BB;
+}
+
+nav ul {
+    padding-top: 4px;
+    padding-bottom: 6px;
+    padding-left: 0px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+nav ul li a:link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+nav ul li a:hover {
+    border-width: 0px;
+    color: #45407D;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+nav ul li a:visited {
+    border-width: 0px;
+}
+
+nav ul li a:active {
+    color: #ff0000;
 }
 
 section {
@@ -99,6 +137,21 @@ h3 {
 
 .table-products tr:nth-child(even) {
     background-color: #DDA384;
+}
+
+.table-products tr:hover {
+    background-color: #652B0C;
+    cursor: pointer;
+    color: #FFD7C2;
+    transition: All 1s ease;
+}
+
+.table-products img {
+    transition: transform .2s ease-out; 
+}
+
+.table-products img:hover {
+    transform: scale(2.5) translate(-22px, 22px);
 }
 
 
