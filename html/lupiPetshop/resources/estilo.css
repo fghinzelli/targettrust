@@ -221,3 +221,13 @@ select, textarea {
 .form-contato p { 
     margin-bottom: 20px;
 }
+
+@keyframes bannerIndex {
+    0% {
+        
+    }
+
+    25% {
+
+    }
+}
