@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Template HTML</title>
+        <link rel="stylesheet" href="exercicio1.css" />
+        <script src="exercicio1.js" defer="defer"></script>
+    </head>
+    <body>
+        <header></header>
+		<main>
+            <h1>Miséria Calculator</h1>
+			<form onsubmit="return false;">
+                <fieldset>
+                    <label>Nome</label>
+                    <input type="text" id="nome" /><br />
+                </fieldset>
+                <fieldset>
+                    <label>Salário</label>
+                    <input type="number" id="salarioMensal" /> <br />
+                </fieldset>
+                <fieldset>
+                    <input type="submit" onclick="calcular();" id="btnCalcular" />
+                </fieldset>
+            </form>
+            <section class="resultados">
+                <div class="linha">
+                    <label>Nome:</label>
+                    <span id="nomeResultado"></span><br />
+                </div>
+                <div class="linha">
+                    <label>Salário Anual:</label>
+                    <span class="moeda" id="salarioAnual">0.00</span><br />
+                </div>
+                <div class="linha">
+                    <label>Desconto INSS:</label>
+                    <span class="moeda" id="descontoInss">0.00</span><br />
+                </div>
+                <div class="linha">
+                    <label>Líquido Anual:</label>
+                    <span class="moeda" id="liquidoAnual">0.00</span><br />
+                </div>    
+            </section>
+		</main>
+		<footer></footer>
+    </body>
+</html>

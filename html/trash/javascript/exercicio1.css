@@ -1,0 +1,43 @@
+main {
+    width: 30%;
+    margin: 0px auto;
+}
+
+main h1 {
+    text-align: center;
+}
+
+fieldset {
+    border: none;
+}
+
+main form label {
+    display: inline-block;
+    width: 20%;
+}
+
+.resultados label {
+    display: inline-block;
+    width: 35%;
+    font-weight: bold;
+}
+
+.resultados span {
+    padding: 15px;
+}
+
+.linha {
+    padding: 10px;
+}
+
+.moeda::before {
+    content:"R$ ";
+}
+
+#descontoInss {
+    color: red;
+}
+
+#liquidoAnual {
+    color: blue;
+}
