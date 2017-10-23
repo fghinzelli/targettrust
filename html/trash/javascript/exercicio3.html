@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Média JS</title>
+    </head>
+    <body>
+        <div id="resultado"></div>
+    </body>
+
+    <script>
+        var numeros = [];
+        var media = 0;
+
+        var quantidade = parseInt(prompt('Quantos números? '));
+
+        for (i=0; i<quantidade; i++){
+            numeros.push(parseFloat(prompt('Informe um número: ')));
+        }
+        var total = 0;
+        for (num in numeros) {
+            total += numeros[num]; 
+        }
+
+        document.getElementById('resultado').innerHTML = 'A média dos números é ' + (total / quantidade);
+
+    </script>
+</html>
