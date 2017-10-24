@@ -65,8 +65,8 @@ if ( (idade >= 18) && (idade <= 70) ) {
 
 // Escreva um software que leia um número e informe se ele é par ou impar, positivo ou negativo.
 
-numeroParImparPositivoNegativo();
-
+// numeroParImparPositivoNegativo();
+/* 
 function numeroParImparPositivoNegativo() {
     var numero = parseInt(prompt('Informe um número: '));
 
@@ -87,5 +87,31 @@ function numeroParImparPositivoNegativo() {
     }
 
     console.log(resultado);d
-
 }
+*/
+
+var i = 0;
+var shopLogo = document.getElementById('homeOffers');
+var imagens = ['homeOffers.png', 'home.png', 'dogHTML.jpg', 'dogCss.jpg', 'catJavaScript.jpg'];
+var arrayImages = [];
+
+for (j=0; j<imagens.length; j++) {
+    var imagem = new Image();
+    imagem.src = "images/" + imagens[j];
+    arrayImages.push(imagem);
+}
+
+function changeShopLogo() {
+    if (shopLogo) {
+        if (i === arrayImages.length) {
+            i = -1;
+        } else {
+            shopLogo.src = arrayImages[i].src;
+        }
+        i++;
+        setTimeout("changeShopLogo()", 5000);
+    }
+}
+
+changeShopLogo();
+
