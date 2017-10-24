@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8" />
+        <title>Média JS</title>
+    </head>
+    <body>
+        <div id="resultado"></div>
+    </body>
+
+    <script>
+        var media = media(456, 154);
+
+        document.getElementById('resultado').innerHTML = 'A média dos números é ' + media;
+
+        function media(num1, num2) {
+            media = (num1 + num2) / 2;
+            return media;
+        }
+    </script>
+</html>
