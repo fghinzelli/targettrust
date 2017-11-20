@@ -1,3 +1,5 @@
+
+// Primeira forma
 function Usuario($nome, $telefone, $email) {
   console.log(arguments);
   var nome = $nome;
@@ -41,12 +43,13 @@ function Usuario($nome, $telefone, $email) {
 
 var usuario = new Usuario("Fernando", "54090809809", "email@mail.com", 1234);
 
+Usuario.prototype.toString = function() {
+  return "Email: " + this.getEmail();
+}
 
 // objeto utilizando arguments
 
-function Pessoa() {
-  console.log(arguments);
-  
+function Pessoa() {a
   // Recebe o primeiro argumento ou null
   var nome = arguments[0]||null,
       telefone = arguments[1]||null;
