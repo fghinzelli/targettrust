@@ -7,3 +7,14 @@ var listaProdutos = [
     {nome:'Leite Aptamil 2 800g',preco:33.90, quantidade:2},
     {nome:'Lencos Umedecidos Huggies Turma Monica C/96',preco: 12.84, quantidade:4}
 ];
+
+function montaLista() {
+    var lista = document.querySelector("#listaprodutos");
+    for (var i = 0; i<listaProdutos.length; i++) {
+        var item = document.createElement("li");
+        item.textContent = listaProdutos[i].nome + " - " + "R$ " + listaProdutos[i].preco + " - Comprar";
+        lista.appendChild(item);
+    }
+}
+
+montaLista();
