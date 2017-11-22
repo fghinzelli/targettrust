@@ -6,7 +6,7 @@ var conts = {
 // Classe Usuario
 
 function Usuario($nome, $telefone) {
-    parametros = arguments;
+    var parametros = arguments;
     this.setNome = setNome;
     this.getNome = getNome;
     this.setTelefone = setTelefone;
@@ -54,9 +54,12 @@ function Request($method, $URL, $callBackSuccess) {
 
 Request("GET", conts.base + "/usuario", function($retorno){
     //console.log($retorno);
-    for (var i=0; i<$retorno.length; i++) {
-        usuario = new Usuario($retorno[i].nome, $retorno[i].telefone)
-        //console.log($retorno[i]);
+    var json = JSON.parse($retorno);
+    var user_list = [];
+    for (var i=0; i<json.length; i++) {
+        var usuario = new Usuario(json[i].nome, json[i].telefone);
+        user_list.push(usuario);
     } 
+    return user_list;
 });
 
