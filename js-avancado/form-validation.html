@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validação de Formulários</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-offset-3">
+        
+                <h1>Formulário de Cadastramento</h1>
+                <form class="form" action="post" id="form-cadastro">
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Nome" name="nome" type="text" id="nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Email" name="email" type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" placeholder="Telefone" name="telefone" type="text" id="telefone" required>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-default" type="button" id="btn-enviar" value="Enviar">
+                    </div>
+                </form>
+
+                <form id="form-search">
+                    <input id="txt-search" name="txtSearch" type="text" class="form-control">
+                    <input id="btn-search" type="button" class="btn btn-default" value="Pesquisar">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        window.onload = function() {
+            var usuario = new Usuario(JSON.parse(window.localStorage.getItem("usuariosCadastrados")) || []);
+            var btnEnviar = document.getElementById("btn-enviar");
+            var form = document.getElementById("form-cadastro");
+            var formSearch = document.getElementById("form-search");
+            var btnSearch = document.getElementById("btn-search");
+            var txtSearch = document.getElementById("txt-search");
+            
+            btnEnviar.addEventListener("mousedown", function() {
+                if(form.checkValidity()) {
+                    usuario_form = { 
+                        nome: form.nome.value, 
+                        email: form.email.value, 
+                        telefone: form.telefone.value
+                    }
+                    usuario.addUsuario(usuario_form);
+                    alertVibrate(100);
+                } else {
+                    alert("Verifique os campos");
+                    alertVibrate(1000);
+                }
+            });
+
+            btnSearch.addEventListener("mousedown", function() {
+                console.log(usuario.searchUsuario(txtSearch.value));
+            });
+        }
+
+        
+
+        function Usuario() {
+            this.cadastrados = arguments[0] || []; 
+        }
+
+        Usuario.prototype.addUsuario = function($usuario) {
+            if (typeof $usuario == 'object') {
+                this.cadastrados.push($usuario);
+                window.localStorage.setItem("usuariosCadastrados", JSON.stringify(this.cadastrados));
+            } else {
+                alert('Dados inválidos')
+            }
+        }
+
+        Usuario.prototype.searchUsuario = function($string) {
+            var filtrados = this.cadastrados.filter(function($usuario) {
+                return JSON.stringify($usuario).indexOf($string) > -1;
+            });
+            return filtrados;
+        }
+
+        function alertVibrate($time) {
+            if(!!navigator.vibrate) {
+                navigator.vibrate($time);
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>

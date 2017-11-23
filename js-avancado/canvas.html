@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="tela" width="600" height="400">
+        <!--<img src="https://seeklogo.com/images/J/javascript-logo-E967E87D74-seeklogo.com.png" width="50" height="50"/>-->
+    </canvas>
+    <script>
+
+        window.onload = function() {
+            var tela = document.getElementById("tela");
+            var contexto = tela.getContext('2d');
+
+            var img = document.createElement("img")
+            img.src = "https://seeklogo.com/images/J/javascript-logo-E967E87D74-seeklogo.com.png";
+            tela.appendChild(img);
+
+            //var imagem = contexto.canvas.childNodes[1];
+            contexto.drawImage(img, 100, 100);
+            
+            contexto.fillStyle = "blue";
+            contexto.fillRect(20, 20, 50, 50);
+
+            contexto.fillStyle = "rgba(255,0,0,0.5)";
+            contexto.fillRect(30, 30, 50, 50);   
+            
+            
+        }
+        
+    </script>
+</body>
+    
+</html>
