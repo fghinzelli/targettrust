@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Projeto final</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Usuários</h1>
+        <div class="row">
+            <div class="col-md-8 col-offset-3">
+                <form id="form-search">
+                    <div class="input-group">
+                        <input id="txt-search" name="txtSearch" type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <input id="btn-search" type="button" class="btn btn-default" value="Pesquisar">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-offset-3">
+                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modalCadastro">Novo Usuário</button>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-offset-3">
+                <table class="table table-hover">
+                    <thead>
+                        <tr><th>Nome</th><th>Email</th><th>Telefone</th><th>Ações</th></tr>
+                    </thead>
+                    <tbody id="tbody-usuarios">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="modalCadastro" class="modal fade" role="dialog">
+        <!-- Modal Usuário-->
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Formulário de Cadastramento</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form" action="post" id="form-cadastro">
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Nome" name="nome" type="text" id="nome" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Email" name="email" type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="Telefone" name="telefone" type="text" id="telefone" required>
+                            </div>
+                            <div class="form-group">
+                                <input class="btn btn-default" type="button" id="btn-enviar" value="Enviar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="prj-final-rest.js"></script>
+    <script src="prj-final-usuario.js"></script>
+    <script src="prj-final.js"></script>
+</body>
+</html>
