@@ -29,3 +29,73 @@
 - * = template
 - [()] = 2 bind
 - () = Eventes
+
+### Roteamento
+
+
+- No arquivo app.component.html deve ser inserido o seletor <router-outlet>
+
+```
+<router-outlet></router-outlet>
+```
+
+
+- Criar arquivo app.routes.ts
+
+```
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+
+const ROUTES = [
+    { path: '', compontent: HomeComponent },
+    { path: 'contato', component: ContactComponent}
+]
+
+- No arquivo app.model.ts inserir 
+ ```
+ import { RouterModule } from "@angular/router";
+ import { ROUTES } from './app.routes'
+ ```
+ e em imports
+ ```
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(ROUTES)
+  ],
+ ``` 
+ - Para utilizar uma rota vazia (/)
+ 
+ ```
+ pathMatch: 'full'
+ ```
+ 
+ - Redirecionar 
+ ```
+ { path: '**', redirectTo: 'inicio'}
+ ```
+ 
+ - Na sequencia das rotas, é preferível utilizar o parâmetro pathMatch = 'full' em lugar de alterar a sequência
+ das entradas na lista de rotas
+ 
+ #### Organização de Rotas
+ 
+ ```
+	//{ path: 'produtos', component: ProductsComponent, pathMatch: 'full' },
+    //{ path: 'produtos/:id', component: ProductDetailsComponent },
+    // Forma mais organizada de rotas filhas:
+    {
+        path: 'produtos',
+        children: [
+            { path: '', component: ProductsComponent, pathMatch: 'full'},
+            { path: ':id', component: ProductDetailsComponent, } 
+        ]
+    },
+ ```
+ 
+ ### Links
+ 
+ - Forma correta de implementar links com concatenação de strings
+ <a [routerLink]="['/produtos', product.id]">Ver detalhes</a>
+ 
+ 
+
