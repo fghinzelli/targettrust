@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductsService } from "../products.service";
+import { Product } from "../product.model";
 
 @Component({
   selector: 'ttt-product-details',
@@ -9,7 +10,10 @@ import { ProductsService } from "../products.service";
   providers: [ ProductsService ]
 })
 export class ProductDetailsComponent implements OnInit {
-  product: any
+  // Instanciar o objeto previne que erros sejam exibidos quando ainda não tiverem sido recebidos os dados do webservice
+  product: Product = new Product()
+  today = new Date()
+
   constructor(private activatedRoute: ActivatedRoute, 
               private productsService: ProductsService) { }
   

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from './products.service';
+import { IProduct } from "./product.model";
 
 @Component({
   selector: 'ttt-products',
@@ -9,7 +10,7 @@ import { ProductsService } from './products.service';
 })
 export class ProductsComponent implements OnInit {
 
-  products: any[]
+  products: IProduct[]
   /*
   Valores estaticos
   products: any[] = [
@@ -24,8 +25,11 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit() {
     this.productsService.getAll().subscribe(
-      (data:any[]) => this.products = data,
-      error => {}
+      (data:IProduct[]) => this.products = data,
+      error => { 
+        alert('Ocorreu um erro!');
+        console.log(error);
+      }
     )
   }
 

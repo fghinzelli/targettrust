@@ -1,4 +1,8 @@
 <section class="product-details">
   <h1>{{product.name}}</h1>
   <p>{{product.description}}</p>
+  <p>{{product.price | currency:'BRL' }}</p>
+  <p>{{product.url}}</p>
+
+  Hoje {{ today | date }}
 </section>
