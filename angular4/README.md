@@ -50,6 +50,7 @@ const ROUTES = [
     { path: '', compontent: HomeComponent },
     { path: 'contato', component: ContactComponent}
 ]
+```
 
 - No arquivo app.model.ts inserir 
  ```
