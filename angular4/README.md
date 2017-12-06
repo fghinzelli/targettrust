@@ -98,4 +98,19 @@ const ROUTES = [
  <a [routerLink]="['/produtos', product.id]">Ver detalhes</a>
  
  
+ ## Injeção de dependências
+ 
+ ## Serviços
+ 
+ - Preparação do webservice
+ ``` npm install -g json-server ```
+ ``` json-server <nome-json>```
+  localhost:3000
+ 
+ - Criação do serviço
+ ```ng generate service <componente/servico>```
+ ```ng g s products/products```
+  Será criado um arquivo products.service.ts
+ 
+ 
 
