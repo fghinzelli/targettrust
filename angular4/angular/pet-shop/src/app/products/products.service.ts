@@ -34,6 +34,7 @@ export class ProductsService {
       return product
     })
     */
+    .catch(error => Observable.throw(error))
 
   }
 }
