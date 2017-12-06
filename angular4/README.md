@@ -110,7 +110,87 @@ const ROUTES = [
  - Criação do serviço
  ```ng generate service <componente/servico>```
  ```ng g s products/products```
-  Será criado um arquivo products.service.ts
+ 
+ - Será criado um arquivo products.service.ts
+
+```
+import { Injectable } from '@angular/core';
+// Angular 2,4
+// import { Http } from '@angular/http'
+// Angular 5
+import { HttpClient } from "@angular/common/http";
+
+@Injectable()
+export class ProductsService {
+
+  constructor(private http: HttpClient) { }
+
+  getAll() {
+    return this.http.get('http://localhost:3000/products')
+  }
+}
+``` 
+ 
+ - Módulos maiores devem ser declarados dentro do app.module.js
+  
+  ```
+  @NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    HomeComponent,
+    ContactComponent,
+    ProductsComponent,
+    ProductComponent,
+    ProductDetailsComponent
+  ],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(ROUTES),
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+ ```
+ 
+ - No componente que irá consumir o serviço, importar o serviço, incluir em providers e incluí-lo no construtor:
+ 
+ ```
+ import { Component, OnInit } from '@angular/core';
+import { ProductsService } from './products.service';
+
+@Component({
+  selector: 'ttt-products',
+  templateUrl: './products.component.html',
+  styleUrls: ['./products.component.css'],
+  providers: [ ProductsService ]
+})
+export class ProductsComponent implements OnInit {
+
+  products: any[]
+  /*
+  Valores estaticos
+  products: any[] = [
+    {id: 1, name: "Racao pedigree", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magni."},
+    {id: 2, name: "Gaiola de Hamster", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magni."},
+    {id: 3, name: "Cama para cachorro", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magni."},
+    {id: 4, name: "Roupa de gato", description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, magni."}
+
+  ]
+  */
+  constructor(private productsService: ProductsService) { }
+
+  ngOnInit() {
+    this.productsService.getAll().subscribe(
+      (data:any[]) => this.products = data,
+      error => {}
+    )
+  }
+
+}
+ ```
  
  
 
