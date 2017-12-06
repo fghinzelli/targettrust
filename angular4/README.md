@@ -192,5 +192,13 @@ export class ProductsComponent implements OnInit {
 }
  ```
  
+ - Para acionar uma promisse do serviço, é utilizado .subscribe, que "escuta" as alterações do serviço,
+ num conceito de Programação Reativa. Sempre que uma alteração ocorrer os "ouvintes" serão avisados.
+ 
+ - Para capturar os erros utiliza-se o segundo parametro do subscribe
  
 
+- É possível passar concatenar uma string de uma url aos parâmetros utilizando outra sintaxe do EC6:
+```
+this.http.get(`http://localhost:3000/products/${id}`)
+```
