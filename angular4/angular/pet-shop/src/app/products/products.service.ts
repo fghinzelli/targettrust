@@ -37,4 +37,10 @@ export class ProductsService {
     .catch(error => Observable.throw(error))
 
   }
+
+  create(product: Product) : Observable<Product> {
+    return this.http.post('http://localhost:3000/products', product)
+    .map((data:Product) => data)
+    .catch(error => Observable.throw(error))
+  }
 }

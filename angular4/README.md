@@ -203,3 +203,17 @@ export class ProductsComponent implements OnInit {
 ```
 this.http.get(`http://localhost:3000/products/${id}`)
 ```
+
+
+## Formulários
+
+### Template Variables
+- Dentro do template o valor de ngModel pode ser usado para testar outros campos
+``` <input type="checkbox" [(ngModel)]="campo1" #show="ngModel">
+
+	<div ngIf="show">
+```
+
+```
+ng generate guard <nome_guardian>
+```

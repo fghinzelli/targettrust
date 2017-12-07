@@ -1,7 +1,7 @@
 <section class="products">
   <h1>Lista de Produtos</h1>
-  
+  <a [routerLink]="['/produtos/novo']">Novo produto</a>
+  <br>
   <ttt-product *ngFor="let product of products" [product]="product"></ttt-product>
-
   
 </section>

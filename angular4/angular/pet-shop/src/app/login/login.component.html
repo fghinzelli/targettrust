@@ -1,0 +1,11 @@
+<section class="login">
+  <form (ngSubmit)="doLogin()">
+    <label for="username" >Usuário</label>
+    <input type="text" name="username" [(ngModel)]="username" />
+    <br>
+    <label for="username">Senha</label>
+    <input type="password" name="password" [(ngModel)]="password" />
+    <br>
+    <button type="submit">Entrar</button>
+  </form>
+</section>
