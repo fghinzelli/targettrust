@@ -4,7 +4,7 @@ import { Observable } from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Router } from "@angular/router";
-
+import { environment } from '../environments/environment';
 
 
 @Injectable()
@@ -42,7 +42,7 @@ export class AuthService {
   }
 
   login(username: string, password: string) : Observable<boolean> {
-  return this.http.get(`http://localhost:3000/users?username=${username}&password=${password}`)
+  return this.http.get(`${environment.apiUrl}/users?username=${username}&password=${password}`)
     .map((data: any[]) => {
       if (!data.length) {
         return false

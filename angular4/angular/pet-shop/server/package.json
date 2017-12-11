@@ -1,0 +1,14 @@
+{
+  "name": "dist",
+  "version": "1.0.0",
+  "description": "",
+  "main": "inline.f4ecc2b36f8ceac62936.bundle.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

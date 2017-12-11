@@ -1,11 +1,14 @@
 <section class="login">
-  <form (ngSubmit)="doLogin()">
+  <form name="loginForm" [formGroup]="loginForm" (ngSubmit)="doLogin()">
     <label for="username" >Usuário</label>
-    <input type="text" name="username" [(ngModel)]="username" />
+    <input type="text" name="username" formControlName="username" />
+    <span class="error" *ngIf="username.dirty && username.errors?.required">Campo Obrigatório</span>
+    <span class="error" *ngIf="username.errors?.minlength">Tamanho mínimo de 4 caracteres</span>
+    
     <br>
     <label for="username">Senha</label>
-    <input type="password" name="password" [(ngModel)]="password" />
+    <input type="password" name="password" formControlName="password" />
     <br>
-    <button type="submit">Entrar</button>
+    <button [disabled]="loginForm.invalid" type="submit">Entrar</button>
   </form>
 </section>

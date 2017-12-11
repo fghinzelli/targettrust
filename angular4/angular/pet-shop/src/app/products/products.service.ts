@@ -7,20 +7,20 @@ import { Observable } from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Product } from "./product.model";
-
+import { environment } from '../../environments/environment';
 @Injectable()
 export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
   getAll() : Observable<Product[]>{
-    return this.http.get('http://localhost:3000/products')
+    return this.http.get(`${environment.apiUrl}/products`)
     .map((data:Product[]) => data)
     .catch(error => Observable.throw(error))
   }
 
   getById(id : number) : Observable<Product>{
-    return this.http.get(`http://localhost:3000/products/${id}`)
+    return this.http.get(`${environment.apiUrl}/products/${id}`)
     .map((data: Product) => data)
     /*
     Para evitar que atributos que não estão na interface sejam exibidos é possível instanciar 
@@ -39,7 +39,7 @@ export class ProductsService {
   }
 
   create(product: Product) : Observable<Product> {
-    return this.http.post('http://localhost:3000/products', product)
+    return this.http.post(`${environment.apiUrl}/products`, product)
     .map((data:Product) => data)
     .catch(error => Observable.throw(error))
   }

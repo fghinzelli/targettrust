@@ -48,6 +48,13 @@
       "price": 50,
       "url": "www.url2.com",
       "id": 7
+    },
+    {
+      "name": "Produto x",
+      "description": "descricao x",
+      "price": 23,
+      "url": "",
+      "id": 8
     }
   ],
   "users": [
