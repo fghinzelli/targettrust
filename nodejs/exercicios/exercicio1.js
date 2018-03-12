@@ -6,6 +6,7 @@ const port = 3002;
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     
+    //res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
     //res.setHeader('Content-Type', 'text/json');
     //res.end('{"nome": "Fernando Ghinzelli", "nascimento": "14/08/1985", "email": "fghinzelli@mprs.mp.br"}');
 
