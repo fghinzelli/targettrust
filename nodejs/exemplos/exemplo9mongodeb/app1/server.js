@@ -18,8 +18,8 @@ app.get('/', function(req, res) {
 
 app.get('/cadastra', function( req, res) {
     var novoAnimal = Animal({
-        apelido: "Dois",
-        dono: "Andre",
+        apelido: "Um",
+        dono: "Fernando",
         vivo: true,
         endereco: "Rua Frei Clemente, 6",
         dataAlteracao: new Date()
