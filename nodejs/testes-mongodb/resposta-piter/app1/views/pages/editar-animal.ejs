@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../templates/head %>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+   
+</head>
+<body class="container">
+
+<header>
+    <% include ../templates/header %>
+</header>
+
+<main>
+    <% if (message) { %> 
+        <div class="alert alert-success"><%= message %></div>
+    <% } %>
+        
+    <div class="jumbotron">
+        <h2>Editar animal</h2>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">         
+                <div class="panel-title">Editar animal</div>
+            </div>
+            <div class="panel-body">
+                <form method="post">
+                    <div class="form-group">
+                        <label for="apelido">Apelido</label>
+                        <input type="text" name="apelido" class="form-control" id="apelido" value="<%= animal.apelido %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="dataNascimento">Data Nascimento</label>
+                        <input name="dataNascimento" type="text" class="form-control" id="dataNascimento" value="<%= animal.dataNascimento ? animal.dataNascimento.toLocaleDateString('pt-BR') : '' %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="dono">Dono</label>
+                        <input name="dono" type="text" class="form-control" id="dono" value="<%= animal.dono %>">
+                    </div>
+                    <div class="checkbox">
+                        <label for="vivo">
+                            <input type="checkbox" id="vivo" name="vivo" value="true" <% if (animal.vivo) { %> checked="checked" <% } %> >&nbsp;Vivo
+                        </label>
+                    </div>
+                    <% if(animal.id) { %>
+                        <button type="submit" class="btn btn-default">Editar</button>
+                    <%} else { %>
+                        <button type="submit" class="btn btn-default">Cadastrar</button>
+                    <% } %>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <% include ../templates/footer %>
+</footer>
+
+</body>
+</html>

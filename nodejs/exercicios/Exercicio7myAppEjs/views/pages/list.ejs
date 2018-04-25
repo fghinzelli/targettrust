@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../templates/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../templates/header %>
+</header>
+
+<main>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            Listagem de Clientes VIP
+        </div>
+        <div class="panel-body">
+            <table class="table">
+                <thead>
+                    <tr><th>Nome</th><th>Sexo</th><th>Data Nascimento</th><th>Ações</th></tr>
+                </thead>
+                <tbody>
+                    <% clientes.forEach(function(clientes) { %>
+                        <tr><td><%= clientes.nome %> </td>
+                            <td><%= clientes.sexo %></td>
+                            <td><%= clientes.dataNascimento %></td>
+                            <td><a href="#" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span></a>
+                                <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span></a>
+                                <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-share"></span></a>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+                
+            </table>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <% include ../templates/footer %>
+</footer>
+
+</body>
+</html>

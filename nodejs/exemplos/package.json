@@ -1,0 +1,11 @@
+{
+  "name": "exemplos",
+  "version": "1.0.0",
+  "description": "Exemplos e Exercícios em Node.js\r Para o curso de Fundamentos en Node.js versão 6",
+  "main": "my-parser.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

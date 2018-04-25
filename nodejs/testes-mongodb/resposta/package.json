@@ -1,0 +1,15 @@
+{
+  "name": "samplemongo",
+  "version": "1.0.0",
+  "description": "Exemplo usando MongoDB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "exemplo",
+    "modelo"
+  ],
+  "author": "Cassio Trindade",
+  "license": "Uh Terere"
+}

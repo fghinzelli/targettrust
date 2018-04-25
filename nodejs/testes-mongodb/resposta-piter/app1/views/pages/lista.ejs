@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../templates/head %>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+   
+</head>
+<body class="container">
+
+<header>
+    <% include ../templates/header %>
+</header>
+
+<main>
+    <% if (message) { %> 
+        <div class="alert alert-success"><%= message %></div>
+    <% } %>
+    <div class="jumbotron">
+        <div class="panel panel-primary">
+            <div class="panel-heading">         
+                <div class="panel-title">Listagem de animais</div>
+            </div>
+            <div class="panel-body">
+                <table class="table">
+                    <% animais.forEach(function(animal) { %>
+                    <tr>
+                        <td><%= animal.apelido %></td>
+                        <td><%= animal.dono %></td>
+                        <td><%= animal.dataNascimento ? animal.dataNascimento.toLocaleDateString('pt-BR') : '' %></td>
+                        <td><% if (animal.vivo) { %> <i class="fa fa-check"></i> <%} else { %>  <i class="fa fa-times"></i> <%} %></td>
+                        <td>
+                            <a class="btn btn-primary" href="/altera/<%= animal.id %>"><i class="fa fa-pencil"></i></a>
+                            <a class="btn btn-danger" href="/deleta/<%= animal.id %>"><i class="fa fa-eraser"></i></a>
+                        </td>
+                    </tr>
+                    <% }); %>
+                </table>
+            </div>
+            <div class="panel-footer">
+                <a class="btn btn-primary" href="/cadastra"><i class="fa fa-plus"></i></a>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <% include ../templates/footer %>
+</footer>
+
+</body>
+</html>
